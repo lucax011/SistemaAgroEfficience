@@ -1,191 +1,280 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans');
-
-:root {
-    --verde: #00cc00;
-    --verde-claro: #66ff66;
-    --verde-escuro: #009900;
-    --preto: #000000;
-    --branco: #ffffff;
-}
-
-body {
+/* Reset de estilos para garantir consistência entre navegadores */
+* {
     margin: 0;
     padding: 0;
-    font-family: 'Open Sans', Arial, sans-serif;
-    background-color: var(--branco);
+    box-sizing: border-box;
 }
 
-header {
-    background-color: var(--verde-escuro);
-    padding: 20px;
-    color: var(--branco);
-    text-align: center;
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
 }
 
 .container {
-    max-width: 600px;
-    margin: 50px auto;
-    padding: 20px;
-    background-color: var(--verde-claro);
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
+/* Estilos para o cabeçalho */
+.header-page {
+    background-color: #556b2f;
+    color: #fff;
+    padding: 20px;
+}
+.login-link,
+.signup-link {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.login-link a,
+.signup-link a {
+    color: #556b2f;
+    text-decoration: none;
+}
+
+.login-link a:hover,
+.signup-link a:hover {
+    text-decoration: underline;
+}
 .container1 {
     max-width: 600px;
-    margin: 50px auto;
+    margin: 0 auto;
     padding: 20px;
-    background-color: var(--verde-claro);
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.header-title {
+    font-size: 24px;
+}
+
+.header-span {
+    color: #90ee90;
+}
+
+.header-menu ul {
+    list-style: none;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-end;
+    margin-top: 10px;
 }
 
-.form-group {
-    margin-bottom: 15px;
-    width: 48%;
+.header-menu ul li {
+    margin-left: 20px;
 }
 
-label {
-    margin-bottom: 5px;
+.header-menu ul li a {
+    color: #fff;
+    text-decoration: none;
 }
 
-select {
-    padding: 10px;
-    width: 100%;
-    border: 1px solid var(--verde-escuro);
-    border-radius: 3px;
+/* Estilos para a seção hero */
+.hero {
+    background-image: url("../img/pivo-irrigacao.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 40px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-button {
-    padding: 10px;
-    width: 100%;
-    background-color: var(--verde);
-    color: var(--branco);
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
+.hero-title {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.hero-text {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #90ee90;
+    color: #333;
+    padding: 10px 20px;
+    text-decoration: none;
     transition: background-color 0.3s ease;
 }
 
-.card {
-    background-color: #f7f7f7;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin: 20px;
+.btn:hover {
+    background-color: #7cfc00;
+}
+
+/* Estilos para a seção de contato */
+.contato {
+    background-color: #f9f9f9;
+    padding: 40px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-group select {
     width: 100%;
-    /* Aumenta a largura dos cards */
-    display: inline-block;
-    /* Permite que os cards não quebrem a linha */
-    transition: transform 0.3s ease;
-    /* Adiciona animação de transição no hover */
-}
-
-.card:hover {
-    transform: scale(1.05);
-    /* Aumenta o tamanho do card no hover */
-}
-
-.card-header {
-    background-color: #e0e0e0;
     padding: 10px;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+button[type="submit"] {
+    display: inline-block;
+    background-color: #90ee90;
+    color: #333;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #7cfc00;
+}
+
+/* Estilos para a seção de recursos */
+.section-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.card-item {
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    /* Adicionando estilos para o grid */
+    width: calc(50% - 20px);
+    /* Definindo a largura dos elementos */
+    display: inline-block;
+    vertical-align: top;
 }
 
 .card-title {
-    margin: 0;
+    font-size: 20px;
+    margin-bottom: 10px;
 }
 
-.card-body {
-    padding: 10px;
-}
-.card-body img {
-    width: 100%;
+.card-item img {
+    max-width: 100%;
     height: auto;
-    object-fit: cover;
-}
-button:hover {
-    background-color: var(--verde-escuro);
 }
 
-.informacoes-container {
-    margin-top: 30px;
+.card-item p {
+    margin-top: 10px;
+}
+
+/* Estilos para o rodapé */
+.footer {
+    background-color: #556b2f;
+    color: #fff;
     padding: 20px;
-    background-color: var(--verde-claro);
-    border-radius: 5px;
-    display: flex;
-    justify-content: space-around;
+    text-align: center;
 }
 
-.info-item {
-    margin: 10px;
-    display: flex;
-    flex-direction: column;
-}
-
-.info-item h3 {
-    margin: 5px;
-}
-
-.info-item p {
+.footer p {
     margin: 0;
 }
 
-@keyframes rotateAnimation {
-    0% {
-        transform: rotate(0deg);
+/* Media queries para responsividade */
+
+/* Dispositivos com largura de tela de até 600px */
+@media (max-width: 600px) {
+    .header-title {
+        font-size: 20px;
     }
 
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
-@keyframes scaleAnimation {
-    0% {
-        transform: scale(1);
+    .hero-title {
+        font-size: 28px;
     }
 
-    50% {
-        transform: scale(1.2);
+    .hero-text {
+        font-size: 16px;
     }
 
-    100% {
-        transform: scale(1);
-    }
-}
-
-@keyframes slideAnimation {
-    0% {
-        transform: translateX(0);
+    .section-title {
+        font-size: 20px;
     }
 
-    50% {
-        transform: translateX(50px);
+    .card-title {
+        font-size: 18px;
     }
 
-    100% {
-        transform: translateX(0);
+    .footer p {
+        font-size: 14px;
     }
 }
 
-.button-animation {
-    animation-name: rotateAnimation;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
+/* Dispositivos com largura de tela de 601px a 1024px */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .header-title {
+        font-size: 22px;
+    }
+
+    .hero-title {
+        font-size: 32px;
+    }
+
+    .hero-text {
+        font-size: 16px;
+    }
+
+    .section-title {
+        font-size: 22px;
+    }
+
+    .card-title {
+        font-size: 20px;
+    }
+
+    .footer p {
+        font-size: 14px;
+    }
 }
 
-.container-animation {
-    animation-name: scaleAnimation;
-    animation-duration: 1s;
-    animation-iteration-count: infinite;
-}
+/* Dispositivos com largura de tela acima de 1024px */
+@media (min-width: 1025px) {
+    .header-title {
+        font-size: 24px;
+    }
 
-.box-animation {
-    animation-name: slideAnimation;
-    animation-duration: 1s;
-    animation-iteration-count: infinite;
+    .hero-title {
+        font-size: 36px;
+    }
+
+    .hero-text {
+        font-size: 18px;
+    }
+
+    .section-title {
+        font-size: 24px;
+    }
+
+    .card-title {
+        font-size: 20px;
+    }
+
+    .footer p {
+        font-size:16px;
+    }
 }
